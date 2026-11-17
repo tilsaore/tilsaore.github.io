@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tilsa Oré Mónago · Energy Economist</title>
+  <meta name="description" content="Tilsa Oré Mónago, energy economist and data scientist: power markets, market design, and the energy transition.">
+  <link rel="icon" href="../images/Rice_Shield_280_Blue.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --navy: #0b1f3a; --navy-2: #13294b; --teal: #14b8a6; --teal-dark: #0f8f82; --ink: #1c2434; --muted: #5f6b7d; --bg-alt: #f5f7fa; }
+    html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+    body { font-family: "Plus Jakarta Sans", system-ui, sans-serif; color: var(--ink); background: #fff; line-height: 1.6; }
+    .navbar { background: rgba(11,31,58,.97); }
+    .navbar-brand { font-weight: 700; letter-spacing: -.01em; }
+    .nav-link { font-size: .9rem; font-weight: 500; }
+    .hero { background: radial-gradient(1200px 500px at 85% 10%, #1d4e7a 0%, transparent 60%), var(--navy); color: #fff; padding: 7.5rem 0 5rem; }
+    .eyebrow { color: var(--teal); font-weight: 700; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; }
+    .hero h1 { font-weight: 800; font-size: clamp(2rem, 4.5vw, 3.2rem); line-height: 1.12; letter-spacing: -.02em; }
+    .hero p.sub { color: #c6d2e3; font-size: 1.1rem; max-width: 36rem; }
+    .hero-photo { width: 100%; max-width: 320px; aspect-ratio: 1; object-fit: cover; object-position: top; border-radius: 24px; box-shadow: 0 20px 60px rgba(0,0,0,.35); border: 6px solid rgba(255,255,255,.08); }
+    .btn-teal { background: var(--teal); color: var(--navy); font-weight: 700; border: 0; }
+    .btn-teal:hover { background: #2dd4bf; color: var(--navy); }
+    .btn-ghost { border: 1px solid rgba(255,255,255,.35); color: #fff; font-weight: 600; }
+    .btn-ghost:hover { background: rgba(255,255,255,.1); color: #fff; }
+    .stats { background: var(--navy-2); color: #fff; }
+    .stat { padding: 1.6rem 0; text-align: center; }
+    .stat .num { font-size: 1.9rem; font-weight: 800; color: var(--teal); line-height: 1; }
+    .stat .lbl { font-size: .82rem; color: #b8c4d6; margin-top: .4rem; }
+    section.block { padding: 5rem 0; }
+    section.alt { background: var(--bg-alt); }
+    .section-title { font-weight: 800; font-size: 1.9rem; letter-spacing: -.02em; }
+    .section-sub { color: var(--muted); max-width: 40rem; }
+    .card-x { background: #fff; border: 1px solid #e6e9ef; border-radius: 16px; padding: 1.6rem; height: 100%; transition: transform .15s, box-shadow .15s; }
+    .card-x:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(11,31,58,.08); }
+    .icon-badge { width: 46px; height: 46px; border-radius: 12px; background: #e6f7f5; color: var(--teal-dark); display: grid; place-items: center; font-size: 1.35rem; margin-bottom: 1rem; }
+    .card-x h3 { font-size: 1.08rem; font-weight: 700; }
+    .card-x p, .card-x li { font-size: .92rem; color: var(--muted); }
+    .card-x ul { padding-left: 1.1rem; margin: 0; }
+    .work-card .kind { font-size: .72rem; font-weight: 700; color: var(--teal-dark); text-transform: uppercase; letter-spacing: .1em; }
+    .work-card h3 { font-size: 1rem; line-height: 1.4; margin: .5rem 0; }
+    .work-card h3 a { color: var(--ink); text-decoration: none; }
+    .work-card h3 a:hover { color: var(--teal-dark); }
+    .timeline { border-left: 2px solid #d6dde8; margin-left: .5rem; padding-left: 1.75rem; }
+    .tl-item { position: relative; padding-bottom: 1.8rem; }
+    .tl-item::before { content: ""; position: absolute; left: calc(-1.75rem - 7px); top: .35rem; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 3px solid var(--teal); }
+    .tl-item .when { font-size: .8rem; font-weight: 700; color: var(--teal-dark); }
+    .tl-item .what { font-weight: 700; }
+    .tl-item .org { color: var(--muted); font-size: .93rem; }
+    .chip { display: inline-block; font-size: .8rem; font-weight: 600; background: #fff; border: 1px solid #dfe4ec; border-radius: 999px; padding: .3rem .8rem; margin: 0 .35rem .5rem 0; }
+    .cta { background: var(--navy); color: #fff; padding: 4.5rem 0; }
+    .cta h2 { font-weight: 800; letter-spacing: -.02em; }
+    footer { background: #08172b; color: #8796ad; font-size: .82rem; padding: 1.25rem 0; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top py-2">
+  <div class="container">
+    <a class="navbar-brand" href="#">Tilsa Oré Mónago</a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#expertise">Expertise</a></li>
+        <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7">
+        <div class="eyebrow mb-3">Energy economist · Houston, TX</div>
+        <h1 class="mb-4">Power markets, market design, and the economics of the energy transition.</h1>
+        <p class="sub mb-4">Fellow at Rice University's Baker Institute Center for Energy Studies. I bring industrial organization, regulatory experience from the World Bank and Peru's competition authority, and data science to questions about how energy markets are priced and governed.</p>
+        <div class="d-flex flex-wrap gap-2">
+          <a class="btn btn-teal px-4 py-2" href="../files/CV_TilsaOre-2026d.pdf"><i class="bi bi-download me-2"></i>Download CV</a>
+          <!-- TODO: replace with her LinkedIn profile URL -->
+          <a class="btn btn-ghost px-4 py-2" href="#"><i class="bi bi-linkedin me-2"></i>LinkedIn</a>
+        </div>
+      </div>
+      <div class="col-lg-5 text-center">
+        <img class="hero-photo" src="../images/tilsa.png" alt="Portrait of Tilsa Oré Mónago">
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-md-3 stat"><div class="num">20 yrs</div><div class="lbl">in markets, regulation &amp; policy</div></div>
+      <div class="col-6 col-md-3 stat"><div class="num">4 yrs</div><div class="lbl">World Bank competition advisory</div></div>
+      <div class="col-6 col-md-3 stat"><div class="num">6</div><div class="lbl">courses taught at Rice</div></div>
+      <div class="col-6 col-md-3 stat"><div class="num">3</div><div class="lbl">working languages</div></div>
+    </div>
+  </div>
+</div>
+
+<section class="block" id="expertise">
+  <div class="container">
+    <h2 class="section-title mb-2">What I work on</h2>
+    <p class="section-sub mb-5">Economic analysis that connects market structure, regulation, and data.</p>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3"><div class="card-x"><div class="icon-badge"><i class="bi bi-lightning-charge"></i></div><h3>Electricity markets</h3><p>Retail competition, price dispersion, consumer switching, and market power, with a focus on ERCOT.</p></div></div>
+      <div class="col-md-6 col-lg-3"><div class="card-x"><div class="icon-badge"><i class="bi bi-wind"></i></div><h3>Energy transition</h3><p>Green hydrogen hubs, critical minerals and trade, clean-power targets, and climate finance.</p></div></div>
+      <div class="col-md-6 col-lg-3"><div class="card-x"><div class="icon-badge"><i class="bi bi-bank"></i></div><h3>Competition &amp; regulation</h3><p>Antitrust, product-market regulation, and competitive neutrality assessments across 10+ economies.</p></div></div>
+      <div class="col-md-6 col-lg-3"><div class="card-x"><div class="icon-badge"><i class="bi bi-graph-up-arrow"></i></div><h3>Data science</h3><p>Econometrics and ML in Python, R, and Stata; LLM tooling; graduate teaching in statistics for data science.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="work">
+  <div class="container">
+    <h2 class="section-title mb-2">Selected energy work</h2>
+    <p class="section-sub mb-5">Recent research and policy analysis from the Baker Institute's Center for Energy Studies.</p>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4"><div class="card-x work-card"><div class="kind">Policy brief · 2025</div><h3>Building barriers, blocking progress: critical minerals and trade</h3><p class="mb-0">Energy and Resilience: Policy Briefs 2025, Baker Institute.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="card-x work-card"><div class="kind">Commentary · 2025</div><h3>Mining, governance and communities</h3><p class="mb-0">Energy Insights 2025, Baker Institute.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="card-x work-card"><div class="kind">Report · 2023</div><h3><a href="https://www.bakerinstitute.org/research/paving-road-competitive-green-hydrogen-hubs-does-chile-have-chance">Paving the road for competitive green hydrogen hubs: does Chile have a chance?</a></h3><p class="mb-0">With B. Leiss, L. Maxwell, C. White-Nockleby.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="card-x work-card"><div class="kind">Book chapter · 2024</div><h3><a href="../files/Choe-OreMonago-Governance-ClimateFinance-Energy.pdf">Governance and climate finance in the developing world</a></h3><p class="mb-0">In <em>Climate Finance: Supporting a Sustainable Energy Transition</em>, Springer Nature.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="card-x work-card"><div class="kind">Working paper</div><h3>Clean Power Implementation Index: measuring GCC countries' clean energy goals</h3><p class="mb-0">With J. Krane, C. Li, F. Arifurrahman.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="card-x work-card"><div class="kind">In progress</div><h3>Price dispersion and competition in retail electricity markets</h3><p class="mb-0">With J. Kim, S. Kim.</p></div></div>
+    </div>
+    <div class="mt-4"><a class="fw-semibold text-decoration-none" style="color: var(--teal-dark)" href="../research.html">All publications <i class="bi bi-arrow-right"></i></a></div>
+  </div>
+</section>
+
+<section class="block" id="experience">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-7">
+        <h2 class="section-title mb-4">Experience</h2>
+        <div class="timeline">
+          <div class="tl-item"><div class="when">2022 – present</div><div class="what">Fellow in Energy and Market Design</div><div class="org">Center for Energy Studies, Rice University's Baker Institute</div></div>
+          <div class="tl-item"><div class="when">2022 – present</div><div class="what">Lecturer, Economics and Computer Science</div><div class="org">Rice University: MS Energy Economics, Online MS Data Science</div></div>
+          <div class="tl-item"><div class="when">2017 – 2021</div><div class="what">Economist Consultant</div><div class="org">World Bank Group, Markets &amp; Competition Global Team</div></div>
+          <div class="tl-item"><div class="when">2019 – 2021</div><div class="what">Assistant Professor &amp; Program Director</div><div class="org">Universidad de Piura, Lima School of Economics</div></div>
+          <div class="tl-item"><div class="when">2006 – 2010</div><div class="what">Senior Economist, Head of Economic Research</div><div class="org">INDECOPI, Peru's competition authority</div></div>
+          <div class="tl-item pb-0"><div class="when">2005 – 2006</div><div class="what">Economic Adviser</div><div class="org">Ministry of Transportation and Communications, Peru</div></div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <h2 class="section-title mb-4">Education</h2>
+        <div class="card-x mb-4" style="height:auto">
+          <p class="mb-2"><strong class="text-dark">PhD Economics</strong>, Stony Brook University, 2018</p>
+          <p class="mb-2"><strong class="text-dark">MA Applied Economics</strong>, University of Oklahoma, 2012 (Fulbright)</p>
+          <p class="mb-2"><strong class="text-dark">MA Int'l Trade &amp; Economic Cooperation</strong>, Kyung Hee University, 2005</p>
+          <p class="mb-0"><strong class="text-dark">BSc Economics</strong>, PUCP, Peru, 2003</p>
+        </div>
+        <h2 class="section-title mb-3" style="font-size:1.3rem">Tools</h2>
+        <div>
+          <span class="chip">Python</span><span class="chip">R</span><span class="chip">Stata</span><span class="chip">Hugging Face</span><span class="chip">MLOps / LLMOps</span><span class="chip">Matlab</span><span class="chip">LaTeX</span>
+        </div>
+        <h2 class="section-title mt-4 mb-3" style="font-size:1.3rem">Teaching at Rice</h2>
+        <div>
+          <span class="chip">IO &amp; the Energy Sector</span><span class="chip">Econometrics for Energy Markets</span><span class="chip">Statistics for Data Science</span><span class="chip">Applied Econometrics</span><span class="chip">Game Theory</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="container text-center">
+    <h2 class="mb-3">Let's talk energy markets.</h2>
+    <p class="mb-4" style="color:#c6d2e3">Baker Hall 206, Rice University, Houston, TX 77005</p>
+    <a class="btn btn-teal px-4 py-2" href="mailto:tilsa@rice.edu"><i class="bi bi-envelope me-2"></i>tilsa@rice.edu</a>
+  </div>
+</section>
+
+<footer><div class="container d-flex justify-content-between flex-wrap gap-2"><span>© 2026 Tilsa Oré Mónago</span><span>English · Español · Português</span></div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
