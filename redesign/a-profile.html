@@ -15,10 +15,9 @@
     .affil { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; padding-bottom: 1.25rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--rule); }
     .affil img { display: block; width: auto; }
     .affil .logo-rice { height: 34px; }
-    @media (max-width: 575.98px) { .affil .logo-rice { height: 24px; } }
+    .affil .logo-baker { height: 68px; }
+    @media (max-width: 575.98px) { .affil .logo-rice { height: 24px; } .affil .logo-baker { height: 44px; } }
     .sidebar { position: sticky; top: 2.5rem; }
-    .baker-tile { display: block; width: 100%; max-width: 220px; background: #2D6A55; padding: 22px 18px; margin-top: 1.75rem; }
-    .baker-tile img { display: block; width: 100%; height: auto; }
     .portrait { width: 100%; max-width: 220px; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; }
     .name { font-size: 1.7rem; font-weight: 700; line-height: 1.2; margin: 1.1rem 0 .4rem; color: var(--rice); }
     .role { color: var(--gray); margin-bottom: 1rem; }
@@ -40,6 +39,7 @@
 <div class="container py-4" style="max-width: 1080px;">
   <header class="affil">
     <a href="https://www.rice.edu"><img src="../images/Rice_University_Logo_280_Blue.png" alt="Rice University" class="logo-rice"></a>
+    <a href="https://www.bakerinstitute.org"><img src="../images/baker-institute-logo-color.svg" alt="Rice University's Baker Institute for Public Policy" class="logo-baker"></a>
   </header>
   <div class="row g-5">
 
@@ -55,7 +55,6 @@
           <a href="#">LinkedIn</a>
           <a href="https://www.bakerinstitute.org/center-for-energy-studies">Center for Energy Studies</a>
         </div>
-        <a class="baker-tile" href="https://www.bakerinstitute.org"><img src="../images/baker-institute-logo.svg" alt="Rice University's Baker Institute for Public Policy"></a>
       </div>
     </aside>
 
