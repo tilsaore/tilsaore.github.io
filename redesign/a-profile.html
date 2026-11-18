@@ -13,8 +13,10 @@
     body { font-family: "Source Sans 3", system-ui, sans-serif; font-size: 1.06rem; color: #222; background: #fff; line-height: 1.6; }
     a { color: var(--rice); }
     .affil { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; padding-bottom: 1.25rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--rule); }
-    .affil img { display: block; height: 34px; width: auto; }
-    @media (max-width: 575.98px) { .affil img { height: 26px; } }
+    .affil img { display: block; width: auto; }
+    .affil .logo-rice { height: 34px; }
+    .affil .logo-baker { height: 64px; }
+    @media (max-width: 575.98px) { .affil .logo-rice { height: 24px; } .affil .logo-baker { height: 42px; } }
     .sidebar { position: sticky; top: 2.5rem; }
     .portrait { width: 100%; max-width: 220px; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; }
     .name { font-size: 1.7rem; font-weight: 700; line-height: 1.2; margin: 1.1rem 0 .4rem; color: var(--rice); }
@@ -37,8 +39,7 @@
 <div class="container py-4" style="max-width: 1080px;">
   <header class="affil">
     <a href="https://www.rice.edu"><img src="../images/Rice_University_Logo_280_Blue.png" alt="Rice University" class="logo-rice"></a>
-    <!-- Baker Institute logo goes here, e.g.:
-    <a href="https://www.bakerinstitute.org"><img src="../images/baker-institute-logo.png" alt="Rice University's Baker Institute for Public Policy" class="logo-baker"></a> -->
+    <a href="https://www.bakerinstitute.org"><img src="../images/baker-institute-logo.svg" alt="Rice University's Baker Institute for Public Policy" class="logo-baker"></a>
   </header>
   <div class="row g-5">
 
