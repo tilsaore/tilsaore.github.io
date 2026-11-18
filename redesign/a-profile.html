@@ -3,131 +3,103 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tilsa Oré Mónago · Energy Economist</title>
-  <meta name="description" content="Tilsa Oré Mónago, energy economist at Rice University's Baker Institute: power markets, market design, and the energy transition.">
+  <title>Tilsa Oré Mónago</title>
+  <meta name="description" content="Tilsa Oré Mónago, economist at Rice University's Baker Institute. Competition and pricing in energy markets and the economics of the energy transition.">
   <link rel="icon" href="../images/Rice_Shield_280_Blue.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root { --accent: #00205B; --accent-soft: #e8edf6; --muted: #5b6575; --line: #e4e7ec; }
-    body { font-family: "Inter", system-ui, sans-serif; color: #1d2433; background: #fff; line-height: 1.6; }
-    a { color: var(--accent); }
+    :root { --rice: #00205B; --gray: #5e6166; --rule: #d9dbde; }
+    body { font-family: "Source Sans 3", system-ui, sans-serif; font-size: 1.06rem; color: #222; background: #fff; line-height: 1.6; }
+    a { color: var(--rice); }
     .sidebar { position: sticky; top: 2.5rem; }
-    .portrait { width: 168px; height: 168px; object-fit: cover; object-position: top; border-radius: 50%; border: 4px solid var(--accent-soft); }
-    .name { font-weight: 700; font-size: 1.6rem; letter-spacing: -.01em; margin: 1rem 0 .25rem; }
-    .role { color: var(--muted); font-size: .95rem; }
-    .contact li { font-size: .9rem; margin-bottom: .35rem; color: var(--muted); }
-    .contact i { color: var(--accent); width: 1.4rem; display: inline-block; }
-    .btn-accent { background: var(--accent); color: #fff; border: 0; }
-    .btn-accent:hover { background: #0b3484; color: #fff; }
-    .btn-outline-accent { border: 1px solid var(--accent); color: var(--accent); }
-    .btn-outline-accent:hover { background: var(--accent); color: #fff; }
-    section { padding: 2.25rem 0; border-bottom: 1px solid var(--line); }
-    section:last-of-type { border-bottom: 0; }
-    h2 { font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.25rem; }
-    .lead-statement { font-size: 1.45rem; font-weight: 600; line-height: 1.35; letter-spacing: -.01em; }
-    .focus { border-left: 3px solid var(--accent); padding-left: 1rem; }
-    .focus h3 { font-size: 1rem; font-weight: 600; margin-bottom: .2rem; }
-    .focus p { font-size: .92rem; color: var(--muted); margin: 0; }
-    .work-item { margin-bottom: 1.1rem; }
-    .work-item .title { font-weight: 600; }
-    .work-item .meta { font-size: .88rem; color: var(--muted); }
-    .tag { font-size: .7rem; font-weight: 600; background: var(--accent-soft); color: var(--accent); border-radius: 999px; padding: .15rem .55rem; vertical-align: middle; }
-    .xp-row { display: grid; grid-template-columns: 7.5rem 1fr; gap: 1rem; margin-bottom: 1rem; }
-    .xp-row .when { font-size: .85rem; color: var(--muted); padding-top: .1rem; }
-    .xp-row .what { font-weight: 600; }
-    .xp-row .org { font-size: .92rem; color: var(--muted); }
-    .course { font-size: .93rem; }
-    .course code { color: var(--accent); background: none; font-weight: 600; font-size: .85rem; }
-    footer { font-size: .8rem; color: var(--muted); }
-    @media (max-width: 991.98px) { .sidebar { position: static; text-align: center; } .contact { display: inline-block; text-align: left; } }
-    @media (max-width: 575.98px) { .xp-row { grid-template-columns: 1fr; gap: 0; } .lead-statement { font-size: 1.2rem; } }
+    .portrait { width: 100%; max-width: 220px; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; }
+    .name { font-size: 1.7rem; font-weight: 700; line-height: 1.2; margin: 1.1rem 0 .4rem; color: var(--rice); }
+    .role { color: var(--gray); margin-bottom: 1rem; }
+    .links a { display: block; margin-bottom: .2rem; }
+    h2 { font-size: 1.25rem; font-weight: 700; color: var(--rice); border-top: 1px solid var(--rule); padding-top: 1.5rem; margin: 2.25rem 0 1rem; }
+    .lead-p { font-size: 1.2rem; }
+    ul.plain { list-style: none; padding: 0; margin: 0; }
+    ul.plain li { margin-bottom: .75rem; }
+    .gray { color: var(--gray); }
+    table.cv { width: 100%; }
+    table.cv td { padding: 0 0 .7rem; vertical-align: top; }
+    table.cv td.yr { width: 7.5rem; color: var(--gray); white-space: nowrap; padding-right: 1rem; }
+    footer { color: var(--gray); font-size: .9rem; margin-top: 3rem; }
+    @media (max-width: 991.98px) { .sidebar { position: static; } }
+    @media (max-width: 575.98px) { table.cv td.yr { width: 5.5rem; } }
   </style>
 </head>
 <body>
-<div class="container py-5" style="max-width: 1120px;">
+<div class="container py-5" style="max-width: 1080px;">
   <div class="row g-5">
 
-    <!-- Sidebar: identity and contact -->
     <aside class="col-lg-4">
       <div class="sidebar">
-        <img class="portrait" src="../images/tilsa.png" alt="Portrait of Tilsa Oré Mónago">
+        <img class="portrait" src="../images/tilsa.png" alt="Tilsa Oré Mónago">
         <div class="name">Tilsa Oré Mónago</div>
-        <div class="role mb-3">Fellow in Energy and Market Design<br>Center for Energy Studies, Baker Institute<br>Lecturer in Economics, Rice University</div>
-        <ul class="list-unstyled contact mb-4">
-          <li><i class="bi bi-envelope"></i><a href="mailto:tilsa@rice.edu">tilsa@rice.edu</a></li>
-          <li><i class="bi bi-geo-alt"></i>Baker Hall 206, Houston, TX</li>
-          <li><i class="bi bi-translate"></i>English · Spanish · Portuguese</li>
-        </ul>
-        <div class="d-flex flex-wrap gap-2 justify-content-lg-start justify-content-center">
-          <a class="btn btn-sm btn-accent px-3" href="../files/CV_TilsaOre-2026d.pdf"><i class="bi bi-file-earmark-text me-1"></i>CV</a>
+        <p class="role">Fellow in Energy and Market Design, Center for Energy Studies, Baker Institute for Public Policy<br>Lecturer in Economics, Rice University</p>
+        <p class="mb-3">Baker Hall 206<br>6100 Main St., Houston, TX 77005<br><a href="mailto:tilsa@rice.edu">tilsa@rice.edu</a></p>
+        <div class="links">
+          <a href="../files/CV_TilsaOre-2026d.pdf">Curriculum vitae (PDF)</a>
           <!-- TODO: replace with her LinkedIn profile URL -->
-          <a class="btn btn-sm btn-outline-accent px-3" href="#"><i class="bi bi-linkedin me-1"></i>LinkedIn</a>
-          <a class="btn btn-sm btn-outline-accent px-3" href="https://www.bakerinstitute.org/center-for-energy-studies"><i class="bi bi-building me-1"></i>Baker CES</a>
+          <a href="#">LinkedIn</a>
+          <a href="https://www.bakerinstitute.org/center-for-energy-studies">Center for Energy Studies</a>
         </div>
       </div>
     </aside>
 
-    <!-- Main column -->
     <main class="col-lg-8">
-      <section class="pt-0" id="about">
-        <p class="lead-statement mb-3">Energy economist working on power markets, market design, and the economics of the energy transition.</p>
-        <p class="mb-0">I combine industrial organization, hands-on regulatory experience, and data science to study how energy markets are structured, priced, and governed. At Rice University's Baker Institute I work on electricity retail competition, green hydrogen, and critical minerals. Before that I spent four years with the World Bank's Markets &amp; Competition team and led the economic research unit of Peru's competition authority.</p>
-      </section>
+      <p class="lead-p">I am an economist at Rice University. I work on competition and pricing in energy markets, especially retail electricity, and on the economics of the energy transition: hydrogen, critical minerals, and clean-power policy.</p>
+      <p>At the Baker Institute's Center for Energy Studies I am a Fellow in Energy and Market Design, and I teach in Rice's MS in Energy Economics and Online MS in Data Science. Before Rice, I spent four years as an economist with the World Bank's Markets and Competition team, and earlier led the economic research unit at INDECOPI, Peru's competition authority. I received my PhD in economics from Stony Brook University.</p>
 
-      <section id="focus">
-        <h2>Areas of expertise</h2>
-        <div class="row g-4">
-          <div class="col-sm-6"><div class="focus"><h3>Electricity markets &amp; pricing</h3><p>Retail competition, price dispersion, consumer switching, and market power, with a focus on ERCOT.</p></div></div>
-          <div class="col-sm-6"><div class="focus"><h3>Energy transition</h3><p>Green hydrogen hubs, critical minerals and trade, clean-power targets, and climate finance.</p></div></div>
-          <div class="col-sm-6"><div class="focus"><h3>Competition &amp; regulation</h3><p>Antitrust, product-market regulation, and competitive neutrality across 10+ economies.</p></div></div>
-          <div class="col-sm-6"><div class="focus"><h3>Data science &amp; econometrics</h3><p>Python, R, and Stata; ML and LLM tooling; graduate teaching in statistics for data science.</p></div></div>
-        </div>
-      </section>
+      <h2>Areas of expertise</h2>
+      <ul class="plain">
+        <li>Electricity markets: retail competition, price dispersion, consumer switching, and market power.</li>
+        <li>Energy transition: green hydrogen, critical minerals and trade, clean-power targets, and climate finance.</li>
+        <li>Competition policy and regulation: antitrust, product-market regulation, and competitive neutrality.</li>
+        <li>Data analysis: econometrics and machine learning in Python, R, and Stata.</li>
+      </ul>
 
-      <section id="work">
-        <h2>Selected energy work</h2>
-        <div class="work-item"><div class="title">Mining, governance and communities</div><div class="meta">Energy Insights 2025, Baker Institute for Public Policy, Oct. 2025</div></div>
-        <div class="work-item"><div class="title">Building barriers, blocking progress: critical minerals and trade</div><div class="meta">Energy and Resilience: Policy Briefs 2025, Baker Institute, Jun. 2025</div></div>
-        <div class="work-item"><div class="title"><a href="https://www.bakerinstitute.org/research/paving-road-competitive-green-hydrogen-hubs-does-chile-have-chance">Paving the road for competitive green hydrogen hubs: does Chile have a chance?</a></div><div class="meta">Baker Institute Center for Energy Studies, 2023 · with B. Leiss, L. Maxwell, C. White-Nockleby</div></div>
-        <div class="work-item"><div class="title"><a href="../files/Choe-OreMonago-Governance-ClimateFinance-Energy.pdf">Governance and climate finance in the developing world</a></div><div class="meta">Ch. 7 in <em>Climate Finance: Supporting a Sustainable Energy Transition</em>, Springer Nature, 2024 · with B. Choe</div></div>
-        <div class="work-item"><div class="title">Clean Power Implementation Index: measuring GCC countries' fulfillment of clean energy goals <span class="tag">Working paper</span></div><div class="meta">with J. Krane, C. Li, F. Arifurrahman</div></div>
-        <div class="work-item mb-0"><div class="title">Price dispersion and competition in retail electricity markets <span class="tag">In progress</span></div><div class="meta">with J. Kim, S. Kim</div></div>
-        <a class="d-inline-block mt-3 small fw-semibold" href="../research.html">All publications <i class="bi bi-arrow-right"></i></a>
-      </section>
+      <h2>Selected energy work</h2>
+      <ul class="plain">
+        <li>Mining, governance and communities. <span class="gray"><em>Energy Insights 2025</em>, Baker Institute, 2025.</span></li>
+        <li>Building barriers, blocking progress: critical minerals and trade. <span class="gray"><em>Energy and Resilience: Policy Briefs 2025</em>, Baker Institute, 2025.</span></li>
+        <li><a href="../files/Choe-OreMonago-Governance-ClimateFinance-Energy.pdf">Governance and climate finance in the developing world</a>. <span class="gray">With B. Choe. In <em>Climate Finance: Supporting a Sustainable Energy Transition</em>, Springer Nature, 2024.</span></li>
+        <li><a href="https://www.bakerinstitute.org/research/paving-road-competitive-green-hydrogen-hubs-does-chile-have-chance">Paving the road for competitive green hydrogen hubs: does Chile have a chance?</a> <span class="gray">With B. Leiss, L. Maxwell, and C. White-Nockleby. Baker Institute, 2023.</span></li>
+        <li>Clean Power Implementation Index: measuring GCC countries' fulfillment of clean energy goals. <span class="gray">With J. Krane, C. Li, and F. Arifurrahman. Working paper.</span></li>
+        <li>Price dispersion and competition in retail electricity markets. <span class="gray">With J. Kim and S. Kim. Work in progress.</span></li>
+      </ul>
+      <p class="mt-2"><a href="../research.html">Full list of publications</a></p>
 
-      <section id="experience">
-        <h2>Experience</h2>
-        <div class="xp-row"><div class="when">2022 – now</div><div><div class="what">Fellow in Energy and Market Design</div><div class="org">Center for Energy Studies, Rice University's Baker Institute</div></div></div>
-        <div class="xp-row"><div class="when">2022 – now</div><div><div class="what">Lecturer, Economics and Computer Science</div><div class="org">Rice University: MS Energy Economics, Online MS Data Science, undergraduate economics</div></div></div>
-        <div class="xp-row"><div class="when">2017 – 2021</div><div><div class="what">Economist Consultant</div><div class="org">World Bank Group, Markets &amp; Competition Global Team</div></div></div>
-        <div class="xp-row"><div class="when">2019 – 2021</div><div><div class="what">Assistant Professor &amp; Undergraduate Program Director</div><div class="org">Universidad de Piura, Lima School of Economics</div></div></div>
-        <div class="xp-row"><div class="when">2006 – 2010</div><div><div class="what">Senior Economist, Head of Economic Research Unit</div><div class="org">INDECOPI, Peru's competition and IP authority</div></div></div>
-        <div class="xp-row mb-0"><div class="when">2005 – 2006</div><div><div class="what">Economic Adviser, Secretariat of Communications</div><div class="org">Ministry of Transportation and Communications, Peru</div></div></div>
-      </section>
+      <h2>Experience</h2>
+      <table class="cv">
+        <tr><td class="yr">2022–present</td><td>Fellow in Energy and Market Design, Center for Energy Studies, Baker Institute</td></tr>
+        <tr><td class="yr">2022–present</td><td>Lecturer, Departments of Economics and Computer Science, Rice University</td></tr>
+        <tr><td class="yr">2017–2021</td><td>Economist Consultant, Markets and Competition, World Bank Group</td></tr>
+        <tr><td class="yr">2019–2021</td><td>Assistant Professor and Undergraduate Program Director, Universidad de Piura</td></tr>
+        <tr><td class="yr">2006–2010</td><td>Senior Economist and Head of Economic Research, INDECOPI, Peru</td></tr>
+        <tr><td class="yr">2005–2006</td><td>Economic Adviser, Ministry of Transportation and Communications, Peru</td></tr>
+      </table>
 
-      <section id="teaching">
-        <h2>Teaching at Rice</h2>
-        <div class="row g-2">
-          <div class="col-md-6 course"><code>ECON 620</code> Industrial Organization and the Energy Sector</div>
-          <div class="col-md-6 course"><code>ECON 603</code> Statistics &amp; Econometrics for Energy Markets</div>
-          <div class="col-md-6 course"><code>COMP 680</code> Probability &amp; Statistics for Data Science</div>
-          <div class="col-md-6 course"><code>ECON 209</code> Applied Econometrics</div>
-          <div class="col-md-6 course"><code>ECON 300</code> Game Theory</div>
-          <div class="col-md-6 course"><code>GLBL 532</code> Global Governance &amp; Business Environment</div>
-        </div>
-      </section>
+      <h2>Teaching at Rice</h2>
+      <table class="cv">
+        <tr><td class="yr">ECON 620</td><td>Industrial Organization and the Energy Sector</td></tr>
+        <tr><td class="yr">ECON 603</td><td>Statistics and Applied Econometrics for Energy Markets</td></tr>
+        <tr><td class="yr">COMP 680</td><td>Probability and Statistics for Computing and Data Science</td></tr>
+        <tr><td class="yr">ECON 209</td><td>Applied Econometrics</td></tr>
+        <tr><td class="yr">ECON 300</td><td>Game Theory</td></tr>
+      </table>
 
-      <section id="education">
-        <h2>Education</h2>
-        <div class="xp-row"><div class="when">2018</div><div><div class="what">PhD in Economics</div><div class="org">Stony Brook University</div></div></div>
-        <div class="xp-row"><div class="when">2012</div><div><div class="what">MA in Applied Economics</div><div class="org">University of Oklahoma · Fulbright Fellow</div></div></div>
-        <div class="xp-row"><div class="when">2005</div><div><div class="what">MA in International Trade &amp; Economic Cooperation</div><div class="org">Kyung Hee University · KOICA Fellow</div></div></div>
-        <div class="xp-row mb-0"><div class="when">2003</div><div><div class="what">BSc in Economics</div><div class="org">Pontificia Universidad Católica del Perú</div></div></div>
-      </section>
+      <h2>Education</h2>
+      <table class="cv">
+        <tr><td class="yr">2018</td><td>PhD in Economics, Stony Brook University</td></tr>
+        <tr><td class="yr">2012</td><td>MA in Applied Economics, University of Oklahoma (Fulbright Fellow)</td></tr>
+        <tr><td class="yr">2005</td><td>MA in International Trade and Economic Cooperation, Kyung Hee University</td></tr>
+        <tr><td class="yr">2003</td><td>BSc in Economics, Pontificia Universidad Católica del Perú</td></tr>
+      </table>
 
-      <footer class="pt-4">© 2026 Tilsa Oré Mónago</footer>
+      <footer>Updated November 2026</footer>
     </main>
   </div>
 </div>
