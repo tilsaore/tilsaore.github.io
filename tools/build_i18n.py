@@ -16,7 +16,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SITE = "https://tilsaore.github.io"
+SITE = "https://tilsaore.com"
 LANGS = {
     # code: (output dir, og:locale, label in the switcher summary)
     "es": ("es", "es_LA", "Idioma: Español"),
