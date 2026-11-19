@@ -103,13 +103,17 @@
     :root { --rice: #00205B; --gray: #5e6166; --rule: #d9dbde; }
     body { font-family: "Source Sans 3", system-ui, sans-serif; font-size: 1.06rem; color: #222; background: #fff; line-height: 1.6; }
     a { color: var(--rice); }
+    a:focus-visible { outline: 3px solid var(--rice); outline-offset: 2px; border-radius: 2px; }
+    .skip-link { position: absolute; left: 1rem; top: -3rem; background: #fff; color: var(--rice); padding: .5rem .75rem; border: 2px solid var(--rice); z-index: 100; }
+    .skip-link:focus { top: 1rem; }
+    table.cv th { font-weight: 400; text-align: left; }
     .affil { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; padding-bottom: 1.25rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--rule); }
     .affil img { display: block; width: auto; }
     .affil .logo-rice { height: 44px; }
     .affil .logo-baker { height: 68px; }
     @media (max-width: 575.98px) { .affil .logo-rice { height: 28px; } .affil .logo-baker { height: 44px; } }
     .sidebar { position: sticky; top: 2.5rem; }
-    .portrait { display: block; width: 100%; max-width: 232px; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; padding: 6px; background: #fff; border: 1px solid var(--rule); border-bottom: 4px solid var(--rice); }
+    .portrait { display: block; width: 100%; max-width: 232px; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; padding: 6px; background: #fff; border: 1px solid var(--rule); }
     .name { font-size: 1.7rem; font-weight: 700; line-height: 1.2; margin: 1.1rem 0 .4rem; color: var(--rice); }
     .role { color: var(--gray); margin-bottom: 1rem; }
     .links a { display: block; margin-bottom: .2rem; }
@@ -121,14 +125,15 @@
     .feature { border: 1px solid var(--rule); border-top: 3px solid #006A55; padding: 1.1rem 1.25rem; margin-bottom: 1.4rem; }
     .feature .ftitle { font-size: 1.2rem; font-weight: 700; }
     table.cv { width: 100%; }
-    table.cv td { padding: 0 0 .7rem; vertical-align: top; }
-    table.cv td.yr { width: 7.5rem; color: var(--gray); white-space: nowrap; padding-right: 1rem; }
+    table.cv td, table.cv th { padding: 0 0 .7rem; vertical-align: top; }
+    table.cv .yr { width: 7.5rem; color: var(--gray); white-space: nowrap; padding-right: 1rem; }
     @media (max-width: 991.98px) { .sidebar { position: static; } }
-    @media (max-width: 575.98px) { table.cv td.yr { width: 5.5rem; } }
+    @media (max-width: 575.98px) { table.cv .yr { width: 5.5rem; } }
   </style>
 </head>
 <body>
-<div class="container py-4" style="max-width: 1080px;">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="container px-4 py-4" style="max-width: 1080px;">
   <header class="affil">
     <a href="https://www.rice.edu"><img src="images/Rice_University_Logo_280_Blue.png" alt="Rice University" class="logo-rice"></a>
     <a href="https://www.bakerinstitute.org"><img src="images/baker-institute-logo-color.svg" alt="Rice University's Baker Institute for Public Policy" class="logo-baker"></a>
@@ -151,13 +156,13 @@
       </div>
     </aside>
 
-    <main class="col-lg-8 pb-5">
+    <main id="main" class="col-lg-8 pb-5" tabindex="-1">
       <p class="lead-p">I am a Lecturer in the Department of Economics at Rice University and a Fellow in Energy and Market Design at the Center for Energy Studies of Rice University's Baker Institute for Public Policy. My research is in industrial organization, competition policy, and game theory, and I currently work on renewable energy, green hydrogen, electricity retail markets, and critical minerals for the energy transition.</p>
       <p>I teach in Rice's Master of Energy Economics, the Online Master of Data Science, and the undergraduate economics program. Previously I was a consultant with the World Bank Group's Markets and Competition Global Team, a tenure-track assistant professor at the Universidad de Piura in Peru, and Senior Economist and Head of the Economic Research Unit at INDECOPI, Peru's competition authority. I received my PhD in Economics from Stony Brook University.</p>
       <p>I am also a co-founder of <a href="https://locupix.com">Locupix</a>, an early-stage language-learning company that supports 20+ languages, where I have contributed to company formation, tax-related administration, business strategy, and administrative approvals.</p>
 
       <h2>Areas of expertise</h2>
-      <ul class="plain">
+      <ul class="plain" role="list">
         <li>Industrial organization and game theory: market structure, pricing strategies, and switching costs in network industries.</li>
         <li>Electricity markets: price dispersion and competition in retail electricity.</li>
         <li>Energy transition: green hydrogen, critical minerals and trade, clean energy goals, and climate finance.</li>
@@ -171,7 +176,7 @@
         <div class="gray">Baker Institute for Public Policy, 2024</div>
         <p class="mb-0">Latin America's role in supplying copper and lithium for the energy transition, and how lengthy permitting processes and mining conflicts create supply risk.</p>
       </div>
-      <ul class="plain">
+      <ul class="plain" role="list">
         <li><a href="https://www.bakerinstitute.org/research/energy-insights-2026">Competitive Retail Electricity Markets and Consumer Switching in Texas</a>. <span class="gray">In <em>Energy Insights 2026</em>, Center for Energy Studies, October 2026. Also covered by <a href="https://news.rice.edu/news/2026/rice-energy-research-explores-practical-solutions-global-supply-chain-challenges">Rice News</a>.</span></li>
         <li><a href="https://www.bakerinstitute.org/research/energy-insights-2025">Mining, Governance, and Communities</a>. <span class="gray">In <em>Energy Insights 2025</em>, Center for Energy Studies, October 2025.</span></li>
         <li><a href="https://issuu.com/mh183/docs/energy_and_resilience_policy_briefs_2025/46">Building Barriers, Blocking Progress: Critical Minerals and Trade</a>. <span class="gray">In <em>Energy and Resilience: Policy Briefs 2025</em>, Baker Institute, June 2025.</span></li>
@@ -180,52 +185,52 @@
       </ul>
 
       <h2>Media and talks</h2>
-      <ul class="plain">
-        <li><a href="https://laopinion.com/2026/03/16/que-es-el-proyecto-boveda-con-el-que-ee-uu-quiere-asegurar-una-reserva-estrategica-de-minerales-criticos-y-que-rol-juega-america-latina/">Qué es el “Proyecto Bóveda” con el que EE.UU. quiere asegurar una reserva estratégica de minerales críticos y qué rol juega América Latina</a>. <span class="gray"><em>BBC News Mundo</em>, March 2026. Interviewed on U.S. and Chinese competition for Latin American critical minerals.</span></li>
+      <ul class="plain" role="list">
+        <li><a href="https://laopinion.com/2026/03/16/que-es-el-proyecto-boveda-con-el-que-ee-uu-quiere-asegurar-una-reserva-estrategica-de-minerales-criticos-y-que-rol-juega-america-latina/" lang="es">Qué es el “Proyecto Bóveda” con el que EE.UU. quiere asegurar una reserva estratégica de minerales críticos y qué rol juega América Latina</a>. <span class="gray"><em>BBC News Mundo</em>, March 2026. Interviewed on U.S. and Chinese competition for Latin American critical minerals.</span></li>
         <li><a href="https://news.rice.edu/news/2026/rice-energy-research-explores-practical-solutions-global-supply-chain-challenges">Rice energy research explores practical solutions to global supply-chain challenges</a>. <span class="gray"><em>Rice News</em>, 2026. Covers the <em>Energy Insights 2026</em> article on Texas's competitive retail electricity market.</span></li>
         <li><a href="https://news.rice.edu/news/2026/rice-experts-available-discuss-uae-exit-opec-global-energy-implications">Rice experts available to discuss UAE exit from OPEC, global energy implications</a>. <span class="gray"><em>Rice News</em>, 2026.</span></li>
-        <li><a href="https://www.thedialogue.org/wp-content/uploads/2025/05/LEA250509.pdf">What Do Trade Tensions Mean for Critical Minerals?</a> <span class="gray">Featured Q&amp;A, <em>Energy Advisor</em>, Inter-American Dialogue, May 9, 2025. Commentary on U.S. trade with Mexico and South America in critical minerals.</span></li>
+        <li><a href="https://www.thedialogue.org/wp-content/uploads/2025/05/LEA250509.pdf">What Do Trade Tensions Mean for Critical Minerals? (PDF)</a> <span class="gray">Featured Q&amp;A, <em>Energy Advisor</em>, Inter-American Dialogue, May 9, 2025. Commentary on U.S. trade with Mexico and South America in critical minerals.</span></li>
         <li><a href="https://www.wferperu2023.com/speaker/tilsa-ore-monago">Speaker, VIII World Forum on Energy Regulation</a>. <span class="gray">Lima, Peru, 2023.</span></li>
       </ul>
 
       <h2>Other selected work</h2>
-      <ul class="plain">
-        <li><a href="files/Choe-OreMonago-Governance-ClimateFinance-Energy.pdf">Governance and climate finance in the developing world</a>. <span class="gray">With B. Choe. Chapter 7 in <em>Climate Finance: Supporting a Sustainable Energy Transition</em>, Springer Nature, 2024.</span></li>
+      <ul class="plain" role="list">
+        <li><a href="files/Choe-OreMonago-Governance-ClimateFinance-Energy.pdf">Governance and climate finance in the developing world (PDF)</a>. <span class="gray">With B. Choe. Chapter 7 in <em>Climate Finance: Supporting a Sustainable Energy Transition</em>, Springer Nature, 2024.</span></li>
         <li>Clean Power Implementation Index: measuring GCC countries' fulfillment of clean energy goals. <span class="gray">With J. Krane, C. Li, and F. Arifurrahman. Working paper.</span></li>
         <li>Price dispersion and competition in retail electricity markets. <span class="gray">With J. Kim and S. Kim. Work in progress.</span></li>
       </ul>
       <p class="mt-2"><a href="files/CV_TilsaOre-2026d.pdf">Full list of publications in the CV (PDF)</a></p>
 
-      <h2>Experience</h2>
-      <table class="cv">
-        <tr><td class="yr">2023–present</td><td>Lecturer, Department of Economics, Rice University</td></tr>
-        <tr><td class="yr">2022–present</td><td>Fellow in Energy and Market Design, Center for Energy Studies, Rice University's Baker Institute for Public Policy</td></tr>
-        <tr><td class="yr">2025–present</td><td>Co-founder, <a href="https://locupix.com">Locupix</a>, an early-stage language-learning company that supports 20+ languages</td></tr>
-        <tr><td class="yr">2022–2023</td><td>Lecturer, Online Master of Data Science Program, Department of Computer Science, Rice University</td></tr>
-        <tr><td class="yr">2022–2023</td><td>Adjunct Lecturer, Master of Energy Economics Program, Department of Economics, Rice University</td></tr>
-        <tr><td class="yr">2019–2021</td><td>Assistant Professor (tenure-track), Department of Economics, Universidad de Piura, Peru; Undergraduate Program Director, Lima campus (2020–2021)</td></tr>
-        <tr><td class="yr">2018–2019</td><td>Adjunct Professorial Lecturer, Department of Economics, American University</td></tr>
-        <tr><td class="yr">2017–2021</td><td>Consultant, Markets and Competition Global Team, World Bank Group</td></tr>
-        <tr><td class="yr">2006–2010</td><td>Senior Economist and Head of the Economic Research Unit (2007–2010); Economic Analyst (2006–2007), Department of Economic Studies, INDECOPI, Peru</td></tr>
-        <tr><td class="yr">2005–2006</td><td>Economic Adviser, Secretariat of Communications, Ministry of Transportation and Communications, Peru</td></tr>
+      <h2 id="h-experience">Experience</h2>
+      <table class="cv" aria-labelledby="h-experience">
+        <tr><th scope="row" class="yr">2023–present</th><td>Lecturer, Department of Economics, Rice University</td></tr>
+        <tr><th scope="row" class="yr">2022–present</th><td>Fellow in Energy and Market Design, Center for Energy Studies, Rice University's Baker Institute for Public Policy</td></tr>
+        <tr><th scope="row" class="yr">2025–present</th><td>Co-founder, <a href="https://locupix.com">Locupix</a>, an early-stage language-learning company that supports 20+ languages</td></tr>
+        <tr><th scope="row" class="yr">2022–2023</th><td>Lecturer, Online Master of Data Science Program, Department of Computer Science, Rice University</td></tr>
+        <tr><th scope="row" class="yr">2022–2023</th><td>Adjunct Lecturer, Master of Energy Economics Program, Department of Economics, Rice University</td></tr>
+        <tr><th scope="row" class="yr">2019–2021</th><td>Assistant Professor (tenure-track), Department of Economics, Universidad de Piura, Peru; Undergraduate Program Director, Lima campus (2020–2021)</td></tr>
+        <tr><th scope="row" class="yr">2018–2019</th><td>Adjunct Professorial Lecturer, Department of Economics, American University</td></tr>
+        <tr><th scope="row" class="yr">2017–2021</th><td>Consultant, Markets and Competition Global Team, World Bank Group</td></tr>
+        <tr><th scope="row" class="yr">2006–2010</th><td>Senior Economist and Head of the Economic Research Unit (2007–2010); Economic Analyst (2006–2007), Department of Economic Studies, INDECOPI, Peru</td></tr>
+        <tr><th scope="row" class="yr">2005–2006</th><td>Economic Adviser, Secretariat of Communications, Ministry of Transportation and Communications, Peru</td></tr>
       </table>
 
-      <h2>Teaching at Rice</h2>
-      <table class="cv">
-        <tr><td class="yr">ECON 620</td><td>Industrial Organization and Energy Sector</td></tr>
-        <tr><td class="yr">ECON 603</td><td>Statistics and Applied Econometrics for Energy Markets</td></tr>
-        <tr><td class="yr">COMP 680</td><td>Probability and Statistics for Computing and Data Science</td></tr>
-        <tr><td class="yr">ECON 209</td><td>Applied Econometrics</td></tr>
-        <tr><td class="yr">ECON 300</td><td>Game Theory</td></tr>
-        <tr><td class="yr">GLBL 532</td><td>Global Governance and International Business Environment</td></tr>
+      <h2 id="h-teaching">Teaching at Rice</h2>
+      <table class="cv" aria-labelledby="h-teaching">
+        <tr><th scope="row" class="yr">ECON 620</th><td>Industrial Organization and Energy Sector</td></tr>
+        <tr><th scope="row" class="yr">ECON 603</th><td>Statistics and Applied Econometrics for Energy Markets</td></tr>
+        <tr><th scope="row" class="yr">COMP 680</th><td>Probability and Statistics for Computing and Data Science</td></tr>
+        <tr><th scope="row" class="yr">ECON 209</th><td>Applied Econometrics</td></tr>
+        <tr><th scope="row" class="yr">ECON 300</th><td>Game Theory</td></tr>
+        <tr><th scope="row" class="yr">GLBL 532</th><td>Global Governance and International Business Environment</td></tr>
       </table>
 
-      <h2>Education</h2>
-      <table class="cv">
-        <tr><td class="yr">2018</td><td>PhD in Economics, Stony Brook University<br><span class="gray">Advisors: <a href="https://www.stonybrook.edu/commcms/economics/people/_bios/TAUMAN.php">Yair Tauman</a> and <a href="https://www.stonybrook.edu/commcms/economics/people/_bios/BRUSCO.php">Sandro Brusco</a></span></td></tr>
-        <tr><td class="yr">2012</td><td>MA in Applied Economics, University of Oklahoma (Fulbright Fellow)</td></tr>
-        <tr><td class="yr">2005</td><td>MA in International Trade and Economic Cooperation, Kyung Hee University</td></tr>
-        <tr><td class="yr">2003</td><td>BSc in Economics, Pontificia Universidad Católica del Perú</td></tr>
+      <h2 id="h-education">Education</h2>
+      <table class="cv" aria-labelledby="h-education">
+        <tr><th scope="row" class="yr">2018</th><td>PhD in Economics, Stony Brook University<br><span class="gray">Advisors: <a href="https://www.stonybrook.edu/commcms/economics/people/_bios/TAUMAN.php">Yair Tauman</a> and <a href="https://www.stonybrook.edu/commcms/economics/people/_bios/BRUSCO.php">Sandro Brusco</a></span></td></tr>
+        <tr><th scope="row" class="yr">2012</th><td>MA in Applied Economics, University of Oklahoma (Fulbright Fellow)</td></tr>
+        <tr><th scope="row" class="yr">2005</th><td>MA in International Trade and Economic Cooperation, Kyung Hee University</td></tr>
+        <tr><th scope="row" class="yr">2003</th><td>BSc in Economics, Pontificia Universidad Católica del Perú</td></tr>
       </table>
 
     </main>
