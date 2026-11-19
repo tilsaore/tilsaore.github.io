@@ -1,0 +1,56 @@
+<!doctype html>
+<!-- Template for the link-preview images (images/social-card*.jpg).
+     Rendered at 1200x630 by tools/make_social_cards.js; ?lang=en|es|pt selects the text. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --rice: #00205B; --gray: #4a4f57; --rule: #d9dbde; }
+  * { margin: 0; box-sizing: border-box; }
+  body { width: 1200px; height: 630px; overflow: hidden; background: #fff; font-family: "Source Sans 3", sans-serif; color: #222; display: flex; }
+  .photo { width: 420px; height: 630px; object-fit: cover; object-position: 50% 15%; }
+  .text { flex: 1; padding: 64px 64px 52px 60px; display: flex; flex-direction: column; border-top: 10px solid var(--rice); }
+  h1 { font-size: 66px; font-weight: 700; color: var(--rice); line-height: 1.05; letter-spacing: -0.5px; }
+  .tag { font-size: 36px; font-weight: 600; color: #222; margin-top: 14px; }
+  .roles { margin-top: 30px; font-size: 25px; line-height: 1.4; color: var(--gray); }
+  .roles p + p { margin-top: 10px; }
+  .foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 24px; border-top: 1px solid var(--rule); }
+  .logos { display: flex; align-items: center; gap: 30px; }
+  .rice { height: 34px; }
+  .baker { height: 62px; }
+  .url { font-size: 28px; font-weight: 600; color: var(--rice); }
+</style>
+</head>
+<body>
+  <img class="photo" src="../images/tilsa-rice.jpg" alt="">
+  <div class="text">
+    <h1>Tilsa Oré Mónago</h1>
+    <div class="tag" id="tag"></div>
+    <div class="roles"><p id="r1"></p><p id="r2"></p></div>
+    <div class="foot">
+      <div class="logos">
+        <img class="rice" src="../images/Rice_University_Logo_280_Blue.png" alt="">
+        <img class="baker" src="../images/baker-institute-logo-color.svg" alt="">
+      </div>
+      <div class="url">tilsaore.com</div>
+    </div>
+  </div>
+<script>
+  const T = {
+    en: ["Energy &amp; Competition Economist",
+         "Lecturer, Department of Economics, Rice University",
+         "Fellow in Energy and Market Design,<br>Baker Institute for Public Policy"],
+    es: ["Economista de energía y competencia",
+         "Docente, Departamento de Economía, Rice University",
+         "Fellow en Energía y Diseño de Mercados,<br>Instituto Baker de Políticas Públicas"],
+    pt: ["Economista de energia e concorrência",
+         "Docente, Departamento de Economia, Rice University",
+         "Fellow em Energia e Desenho de Mercados,<br>Instituto Baker de Políticas Públicas"],
+  };
+  const lang = new URLSearchParams(location.search).get("lang") || "en";
+  document.documentElement.lang = lang;
+  [tag.innerHTML, r1.innerHTML, r2.innerHTML] = T[lang];
+</script>
+</body>
+</html>

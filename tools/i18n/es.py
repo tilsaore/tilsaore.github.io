@@ -11,6 +11,11 @@ PAIRS = [
     ("Lecturer in Economics at Rice University and Fellow in Energy and Market Design at the Baker Institute. Electricity retail markets, critical minerals, green hydrogen, and competition policy.",
      "Docente de Economía en Rice University y Fellow en Energía y Diseño de Mercados en el Instituto Baker. Mercados minoristas de electricidad, minerales críticos, hidrógeno verde y política de competencia."),
 
+    # Link-preview card
+    ("https://tilsaore.com/images/social-card.jpg", "https://tilsaore.com/images/social-card-es.jpg"),
+    ('content="Tilsa Oré Mónago, Energy and Competition Economist, Rice University and Baker Institute for Public Policy"',
+     'content="Tilsa Oré Mónago, economista de energía y competencia, Rice University e Instituto Baker de Políticas Públicas"'),
+
     # Navigation and sidebar
     (">Skip to main content</a>", ">Saltar al contenido principal</a>"),
     ('alt="Rice University\'s Baker Institute for Public Policy"',
