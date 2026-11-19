@@ -122,6 +122,12 @@
     .lang-switcher .lang-menu a { display: block; padding: .45rem .7rem; border-radius: .35rem; font-size: .95rem; color: #222; text-decoration: none; white-space: nowrap; }
     .lang-switcher .lang-menu a:hover { background: #eef2f8; color: var(--rice); }
     .lang-switcher .lang-menu a[aria-current="page"] { font-weight: 700; color: var(--rice); background: #eef2f8; }
+    @media (max-width: 1199.98px) {
+      .lang-switcher { top: 50%; right: 0; transform: translateY(-50%); }
+      .lang-switcher > summary { width: 34px; height: 46px; border-radius: 8px 0 0 8px; }
+      .lang-switcher > summary svg { width: 20px; height: 20px; }
+      .lang-switcher .lang-menu { top: 50%; right: calc(100% + 8px); transform: translateY(-50%); }
+    }
     table.cv th { font-weight: 400; text-align: left; }
     .affil { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; padding-bottom: 1.25rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--rule); }
     .affil img { display: block; width: auto; }
@@ -159,7 +165,7 @@
     <li><a href="/pt/" lang="pt" hreflang="pt">Português</a></li>
   </ul>
 </details>
-<div class="container px-4 pt-5 pb-4" style="max-width: 1080px;">
+<div class="container px-4 py-4" style="max-width: 1080px;">
   <header class="affil">
     <a href="https://www.rice.edu"><img src="images/Rice_University_Logo_280_Blue.png" alt="Rice University" class="logo-rice"></a>
     <a href="https://www.bakerinstitute.org"><img src="images/baker-institute-logo-color.svg" alt="Rice University's Baker Institute for Public Policy" class="logo-baker"></a>
