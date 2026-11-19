@@ -6,6 +6,13 @@
   <title>Tilsa Oré Mónago | Energy &amp; Competition Economist</title>
   <meta name="description" content="Tilsa Oré Mónago is a Lecturer in the Department of Economics at Rice University and a Fellow in Energy and Market Design at the Baker Institute's Center for Energy Studies. Research on electricity retail markets, critical minerals, green hydrogen, and competition policy.">
   <link rel="canonical" href="https://tilsaore.github.io/">
+  <link rel="alternate" hreflang="en" href="https://tilsaore.github.io/">
+  <link rel="alternate" hreflang="es" href="https://tilsaore.github.io/es/">
+  <link rel="alternate" hreflang="pt" href="https://tilsaore.github.io/pt/">
+  <link rel="alternate" hreflang="x-default" href="https://tilsaore.github.io/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_LA">
+  <meta property="og:locale:alternate" content="pt_BR">
   <meta name="author" content="Tilsa Oré Mónago">
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Tilsa Oré Mónago | Energy &amp; Competition Economist">
@@ -106,6 +113,15 @@
     a:focus-visible { outline: 3px solid var(--rice); outline-offset: 2px; border-radius: 2px; }
     .skip-link { position: absolute; left: 1rem; top: -3rem; background: #fff; color: var(--rice); padding: .5rem .75rem; border: 2px solid var(--rice); z-index: 100; }
     .skip-link:focus { top: 1rem; }
+    .lang-switcher { position: fixed; top: 0; right: 1.5rem; z-index: 1080; }
+    .lang-switcher > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: center; width: 46px; height: 38px; background: var(--rice); color: #fff; border-radius: 0 0 8px 8px; user-select: none; }
+    .lang-switcher > summary::-webkit-details-marker { display: none; }
+    .lang-switcher > summary:hover, .lang-switcher[open] > summary { background: #0b3484; }
+    .lang-switcher > summary:focus-visible { outline: 3px solid var(--rice); outline-offset: 3px; }
+    .lang-switcher .lang-menu { position: absolute; top: calc(100% + 8px); right: 0; min-width: 150px; margin: 0; padding: .3rem; list-style: none; background: #fff; border: 1px solid var(--rule); border-radius: .5rem; box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+    .lang-switcher .lang-menu a { display: block; padding: .45rem .7rem; border-radius: .35rem; font-size: .95rem; color: #222; text-decoration: none; white-space: nowrap; }
+    .lang-switcher .lang-menu a:hover { background: #eef2f8; color: var(--rice); }
+    .lang-switcher .lang-menu a[aria-current="page"] { font-weight: 700; color: var(--rice); background: #eef2f8; }
     table.cv th { font-weight: 400; text-align: left; }
     .affil { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; padding-bottom: 1.25rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--rule); }
     .affil img { display: block; width: auto; }
@@ -133,7 +149,17 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="container px-4 py-4" style="max-width: 1080px;">
+<details class="lang-switcher" id="lang-switcher">
+  <summary aria-label="Language: English" title="Language">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18M5 6h14M5 18h14"/></svg>
+  </summary>
+  <ul class="lang-menu" aria-label="Language">
+    <li><a href="/" lang="en" hreflang="en" aria-current="page">English</a></li>
+    <li><a href="/es/" lang="es" hreflang="es">Español</a></li>
+    <li><a href="/pt/" lang="pt" hreflang="pt">Português</a></li>
+  </ul>
+</details>
+<div class="container px-4 pt-5 pb-4" style="max-width: 1080px;">
   <header class="affil">
     <a href="https://www.rice.edu"><img src="images/Rice_University_Logo_280_Blue.png" alt="Rice University" class="logo-rice"></a>
     <a href="https://www.bakerinstitute.org"><img src="images/baker-institute-logo-color.svg" alt="Rice University's Baker Institute for Public Policy" class="logo-baker"></a>
@@ -236,6 +262,16 @@
     </main>
   </div>
 </div>
+<script>
+(function () {
+  var d = document.getElementById('lang-switcher');
+  if (!d) return;
+  document.addEventListener('click', function (e) { if (d.open && !d.contains(e.target)) d.removeAttribute('open'); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && d.open) { d.removeAttribute('open'); d.querySelector('summary').focus(); }
+  });
+})();
+</script>
 <!-- Start of StatCounter Code for Default Guide -->
 <script type="text/javascript">
 var sc_project=10320452; 

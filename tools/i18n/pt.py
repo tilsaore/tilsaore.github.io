@@ -1,0 +1,132 @@
+"""Portuguese (Brazil) translation of index.html: (english, portuguese) pairs."""
+
+PAIRS = [
+    # Head
+    ("<title>Tilsa Oré Mónago | Energy &amp; Competition Economist</title>",
+     "<title>Tilsa Oré Mónago | Economista de energia e concorrência</title>"),
+    ('content="Tilsa Oré Mónago | Energy &amp; Competition Economist"',
+     'content="Tilsa Oré Mónago | Economista de energia e concorrência"'),
+    ("Tilsa Oré Mónago is a Lecturer in the Department of Economics at Rice University and a Fellow in Energy and Market Design at the Baker Institute's Center for Energy Studies. Research on electricity retail markets, critical minerals, green hydrogen, and competition policy.",
+     "Tilsa Oré Mónago é docente do Departamento de Economia da Universidade Rice e Fellow em Energia e Desenho de Mercados do Centro de Estudos de Energia do Instituto Baker. Pesquisa mercados varejistas de eletricidade, minerais críticos, hidrogênio verde e política de concorrência."),
+    ("Lecturer in Economics at Rice University and Fellow in Energy and Market Design at the Baker Institute. Electricity retail markets, critical minerals, green hydrogen, and competition policy.",
+     "Docente de Economia na Universidade Rice e Fellow em Energia e Desenho de Mercados no Instituto Baker. Mercados varejistas de eletricidade, minerais críticos, hidrogênio verde e política de concorrência."),
+
+    # Navigation and sidebar
+    (">Skip to main content</a>", ">Pular para o conteúdo principal</a>"),
+    ('alt="Rice University\'s Baker Institute for Public Policy"',
+     'alt="Instituto Baker de Políticas Públicas da Universidade Rice"'),
+    ("Fellow in Energy and Market Design, Center for Energy Studies, Baker Institute for Public Policy<br>Lecturer, Department of Economics, Rice University",
+     "Fellow em Energia e Desenho de Mercados, Centro de Estudos de Energia, Instituto Baker de Políticas Públicas<br>Docente, Departamento de Economia, Universidade Rice"),
+    (">Curriculum vitae (PDF)</a>", ">Currículo completo (PDF, em inglês)</a>"),
+    (">Résumé, 2 pages (PDF)</a>", ">Currículo resumido, 2 páginas (PDF, em inglês)</a>"),
+    (">Baker Institute profile</a>", ">Perfil no Instituto Baker</a>"),
+    (">Center for Energy Studies</a>", ">Centro de Estudos de Energia</a>"),
+
+    # Introduction
+    ("I am a Lecturer in the Department of Economics at Rice University and a Fellow in Energy and Market Design at the Center for Energy Studies of Rice University's Baker Institute for Public Policy. My research is in industrial organization, competition policy, and game theory, and I currently work on renewable energy, green hydrogen, electricity retail markets, and critical minerals for the energy transition.",
+     "Sou docente do Departamento de Economia da Universidade Rice e Fellow em Energia e Desenho de Mercados do Centro de Estudos de Energia do Instituto Baker de Políticas Públicas da Universidade Rice. Minha pesquisa abrange organização industrial, política de concorrência e teoria dos jogos, e atualmente trabalho com energia renovável, hidrogênio verde, mercados varejistas de eletricidade e minerais críticos para a transição energética."),
+    ("I teach in Rice's Master of Energy Economics, the Online Master of Data Science, and the undergraduate economics program. Previously I was a consultant with the World Bank Group's Markets and Competition Global Team, a tenure-track assistant professor at the Universidad de Piura in Peru, and Senior Economist and Head of the Economic Research Unit at INDECOPI, Peru's competition authority. I received my PhD in Economics from Stony Brook University.",
+     "Leciono nos mestrados Master of Energy Economics e Online Master of Data Science da Rice, além do programa de graduação em Economia. Anteriormente, fui consultora da Equipe Global de Mercados e Concorrência do Grupo Banco Mundial, professora assistente (tenure-track) na Universidad de Piura, no Peru, e Economista Sênior e Chefe da Unidade de Pesquisa Econômica do INDECOPI, a autoridade de concorrência do Peru. Obtive meu doutorado (PhD) em Economia pela Stony Brook University."),
+    ("I am also a co-founder of <a href=\"https://locupix.com\">Locupix</a>, an early-stage language-learning company that supports 20+ languages, where I have contributed to company formation, tax-related administration, business strategy, and administrative approvals.",
+     "Também sou cofundadora da <a href=\"https://locupix.com\">Locupix</a>, uma empresa em estágio inicial de aprendizado de idiomas que oferece mais de 20 idiomas, onde contribuí para a constituição da empresa, a administração tributária, a estratégia de negócios e a obtenção de aprovações administrativas."),
+
+    # Section headings
+    ("<h2>Areas of expertise</h2>", "<h2>Áreas de especialização</h2>"),
+    ("<h2>Work at the Baker Institute</h2>", "<h2>Trabalhos no Instituto Baker</h2>"),
+    ("<h2>Media and talks</h2>", "<h2>Mídia e palestras</h2>"),
+    ("<h2>Other selected work</h2>", "<h2>Outros trabalhos selecionados</h2>"),
+    (">Experience</h2>", ">Experiência</h2>"),
+    (">Teaching at Rice</h2>", ">Docência na Rice</h2>"),
+    (">Education</h2>", ">Formação acadêmica</h2>"),
+
+    # Areas of expertise
+    ("Industrial organization and game theory: market structure, pricing strategies, and switching costs in network industries.",
+     "Organização industrial e teoria dos jogos: estrutura de mercado, estratégias de preços e custos de troca em indústrias de rede."),
+    ("Electricity markets: price dispersion and competition in retail electricity.",
+     "Mercados de eletricidade: dispersão de preços e concorrência no varejo de eletricidade."),
+    ("Energy transition: green hydrogen, critical minerals and trade, clean energy goals, and climate finance.",
+     "Transição energética: hidrogênio verde, minerais críticos e comércio, metas de energia limpa e financiamento climático."),
+    ("Competition policy and regulation: product market regulation, competitive neutrality, and competition chapters in trade agreements.",
+     "Política de concorrência e regulação: regulação de mercados de produtos, neutralidade competitiva e capítulos de concorrência em acordos comerciais."),
+    ("Applied econometrics and data science: Python (including MLOps and LLMOps), R, Stata, Hugging Face, and Claude Code.",
+     "Econometria aplicada e ciência de dados: Python (incluindo MLOps e LLMOps), R, Stata, Hugging Face e Claude Code."),
+
+    # Work at the Baker Institute
+    ('<div class="gray">Baker Institute for Public Policy, 2024</div>',
+     '<div class="gray">Instituto Baker de Políticas Públicas, 2024</div>'),
+    ("Latin America's role in supplying copper and lithium for the energy transition, and how lengthy permitting processes and mining conflicts create supply risk.",
+     "O papel da América Latina no fornecimento de cobre e lítio para a transição energética e como os longos processos de licenciamento e os conflitos de mineração geram riscos de abastecimento."),
+    ("In <em>Energy Insights 2026</em>, Center for Energy Studies, October 2026. Also covered by ",
+     "Em <em>Energy Insights 2026</em>, Centro de Estudos de Energia, outubro de 2026. Também noticiado pelo "),
+    ("In <em>Energy Insights 2025</em>, Center for Energy Studies, October 2025.",
+     "Em <em>Energy Insights 2025</em>, Centro de Estudos de Energia, outubro de 2025."),
+    ("In <em>Energy and Resilience: Policy Briefs 2025</em>, Baker Institute, June 2025.",
+     "Em <em>Energy and Resilience: Policy Briefs 2025</em>, Instituto Baker, junho de 2025."),
+    ("Working paper with M. Michot Foss, B. Cortés Leiss, and F. J. Monaldi. Center for Energy Studies, December 2024.",
+     "Documento de trabalho com M. Michot Foss, B. Cortés Leiss e F. J. Monaldi. Centro de Estudos de Energia, dezembro de 2024."),
+    ("With B. Leiss, L. Maxwell, and C. White-Nockleby. Center for Energy Studies, 2023.",
+     "Com B. Leiss, L. Maxwell e C. White-Nockleby. Centro de Estudos de Energia, 2023."),
+
+    # Media and talks
+    ("<em>BBC News Mundo</em>, March 2026. Interviewed on U.S. and Chinese competition for Latin American critical minerals.",
+     "<em>BBC News Mundo</em>, março de 2026. Entrevista sobre a disputa entre Estados Unidos e China pelos minerais críticos da América Latina."),
+    ("Covers the <em>Energy Insights 2026</em> article on Texas's competitive retail electricity market.",
+     "Destaca o artigo do <em>Energy Insights 2026</em> sobre o mercado varejista competitivo de eletricidade do Texas."),
+    ("Featured Q&amp;A, <em>Energy Advisor</em>, Inter-American Dialogue, May 9, 2025. Commentary on U.S. trade with Mexico and South America in critical minerals.",
+     "Pergunta em destaque, <em>Energy Advisor</em>, Diálogo Interamericano, 9 de maio de 2025. Comentário sobre o comércio de minerais críticos dos Estados Unidos com o México e a América do Sul."),
+    (">Speaker, VIII World Forum on Energy Regulation</a>. <span class=\"gray\">Lima, Peru, 2023.</span>",
+     ">Palestrante, VIII Fórum Mundial de Regulação de Energia (WFER)</a>. <span class=\"gray\">Lima, Peru, 2023.</span>"),
+
+    # Other selected work
+    ("<span class=\"gray\">With B. Choe. Chapter 7 in <em>",
+     "<span class=\"gray\">Com B. Choe. Capítulo 7 em <em>"),
+    ("<li>Clean Power Implementation Index: measuring GCC countries' fulfillment of clean energy goals. <span class=\"gray\">With J. Krane, C. Li, and F. Arifurrahman. Working paper.</span>",
+     "<li><span lang=\"en\">Clean Power Implementation Index: measuring GCC countries' fulfillment of clean energy goals.</span> <span class=\"gray\">Com J. Krane, C. Li e F. Arifurrahman. Documento de trabalho.</span>"),
+    ("<li>Price dispersion and competition in retail electricity markets. <span class=\"gray\">With J. Kim and S. Kim. Work in progress.</span>",
+     "<li><span lang=\"en\">Price dispersion and competition in retail electricity markets.</span> <span class=\"gray\">Com J. Kim e S. Kim. Trabalho em andamento.</span>"),
+    (">Full list of publications in the CV (PDF)</a>",
+     ">Lista completa de publicações no currículo (PDF, em inglês)</a>"),
+
+    # Experience
+    ("–present</th>", "–atual</th>"),
+    ("<td>Lecturer, Department of Economics, Rice University</td>",
+     "<td>Docente, Departamento de Economia, Universidade Rice</td>"),
+    ("<td>Fellow in Energy and Market Design, Center for Energy Studies, Rice University's Baker Institute for Public Policy</td>",
+     "<td>Fellow em Energia e Desenho de Mercados, Centro de Estudos de Energia, Instituto Baker de Políticas Públicas da Universidade Rice</td>"),
+    ("<td>Co-founder, <a href=\"https://locupix.com\">Locupix</a>, an early-stage language-learning company that supports 20+ languages</td>",
+     "<td>Cofundadora, <a href=\"https://locupix.com\">Locupix</a>, empresa em estágio inicial de aprendizado de idiomas que oferece mais de 20 idiomas</td>"),
+    ("<td>Lecturer, Online Master of Data Science Program, Department of Computer Science, Rice University</td>",
+     "<td>Docente, programa Online Master of Data Science, Departamento de Ciência da Computação, Universidade Rice</td>"),
+    ("<td>Adjunct Lecturer, Master of Energy Economics Program, Department of Economics, Rice University</td>",
+     "<td>Docente adjunta, programa Master of Energy Economics, Departamento de Economia, Universidade Rice</td>"),
+    ("<td>Assistant Professor (tenure-track), Department of Economics, Universidad de Piura, Peru; Undergraduate Program Director, Lima campus (2020–2021)</td>",
+     "<td>Professora assistente (tenure-track), Departamento de Economia, Universidad de Piura, Peru; diretora do programa de graduação, campus Lima (2020–2021)</td>"),
+    ("<td>Adjunct Professorial Lecturer, Department of Economics, American University</td>",
+     "<td>Docente adjunta (Adjunct Professorial Lecturer), Departamento de Economia, American University</td>"),
+    ("<td>Consultant, Markets and Competition Global Team, World Bank Group</td>",
+     "<td>Consultora, Equipe Global de Mercados e Concorrência, Grupo Banco Mundial</td>"),
+    ("<td>Senior Economist and Head of the Economic Research Unit (2007–2010); Economic Analyst (2006–2007), Department of Economic Studies, INDECOPI, Peru</td>",
+     "<td>Economista Sênior e Chefe da Unidade de Pesquisa Econômica (2007–2010); Analista Econômica (2006–2007), Departamento de Estudos Econômicos, INDECOPI, Peru</td>"),
+    ("<td>Economic Adviser, Secretariat of Communications, Ministry of Transportation and Communications, Peru</td>",
+     "<td>Assessora Econômica, Secretaria de Comunicações, Ministério de Transportes e Comunicações, Peru</td>"),
+
+    # Teaching (official course titles stay in English)
+    ("<td>Industrial Organization and Energy Sector</td>", "<td lang=\"en\">Industrial Organization and Energy Sector</td>"),
+    ("<td>Statistics and Applied Econometrics for Energy Markets</td>", "<td lang=\"en\">Statistics and Applied Econometrics for Energy Markets</td>"),
+    ("<td>Probability and Statistics for Computing and Data Science</td>", "<td lang=\"en\">Probability and Statistics for Computing and Data Science</td>"),
+    ("<td>Applied Econometrics</td>", "<td lang=\"en\">Applied Econometrics</td>"),
+    ("<td>Game Theory</td>", "<td lang=\"en\">Game Theory</td>"),
+    ("<td>Global Governance and International Business Environment</td>", "<td lang=\"en\">Global Governance and International Business Environment</td>"),
+
+    # Education
+    ("PhD in Economics, Stony Brook University<br><span class=\"gray\">Advisors: ",
+     "Doutorado (PhD) em Economia, Stony Brook University<br><span class=\"gray\">Orientadores: "),
+    ("</a> and <a href=\"https://www.stonybrook.edu/commcms/economics/people/_bios/BRUSCO.php\">",
+     "</a> e <a href=\"https://www.stonybrook.edu/commcms/economics/people/_bios/BRUSCO.php\">"),
+    ("MA in Applied Economics, University of Oklahoma (Fulbright Fellow)",
+     "Mestrado (MA) em Economia Aplicada, University of Oklahoma (bolsista Fulbright)"),
+    ("MA in International Trade and Economic Cooperation, Kyung Hee University",
+     "Mestrado (MA) em Comércio Internacional e Cooperação Econômica, Kyung Hee University"),
+    ("BSc in Economics, Pontificia Universidad Católica del Perú",
+     "Bacharelado (BSc) em Economia, Pontificia Universidad Católica del Perú"),
+]
