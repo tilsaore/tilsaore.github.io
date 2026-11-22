@@ -23,7 +23,7 @@ PAIRS = [
     ("Fellow in Energy and Market Design, Center for Energy Studies, Baker Institute for Public Policy<br>Lecturer, Department of Economics, Rice University",
      "Fellow em Energia e Desenho de Mercados, Centro de Estudos de Energia, Instituto Baker de Políticas Públicas<br>Docente, Departamento de Economia, Rice University"),
     (">Curriculum vitae (PDF)</a>", ">Currículo completo (PDF, em inglês)</a>"),
-    (">Résumé, 2 pages (PDF)</a>", ">Currículo resumido, 2 páginas (PDF, em inglês)</a>"),
+    (">Resume, 2 pages (PDF)</a>", ">Currículo resumido, 2 páginas (PDF, em inglês)</a>"),
     (">Baker Institute profile</a>", ">Perfil no Instituto Baker</a>"),
     (">Center for Energy Studies</a>", ">Centro de Estudos de Energia</a>"),
 
