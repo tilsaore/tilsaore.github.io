@@ -162,9 +162,9 @@
     table.cv .yr { width: 7.5rem; color: var(--gray); white-space: nowrap; padding-right: 1rem; }
     @media (max-width: 991.98px) { .sidebar { position: static; } }
     @media (max-width: 575.98px) { table.cv .yr { width: 5.5rem; } }
-    .video { display: grid; grid-template-columns: 200px 1fr; gap: 1rem; align-items: center; margin: 0 0 1.1rem; }
+    .video { display: grid; grid-template-columns: 200px 1fr; gap: 1.1rem; align-items: center; }
     .video.playing { display: block; }
-    .video-frame { position: relative; aspect-ratio: 16 / 9; padding: 6px; background: #fff; border: 1px solid var(--rule); }
+    .video-frame { position: relative; aspect-ratio: 16 / 9; background: #000; }
     .video.playing .video-frame { margin-bottom: .5rem; }
     .video-play { display: block; width: 100%; height: 100%; padding: 0; border: 0; background: none; cursor: pointer; position: relative; }
     .video-play img { display: block; width: 100%; height: 100%; object-fit: cover; }
@@ -172,8 +172,8 @@
     .video-play .play-icon svg { width: 40px; height: 28px; }
     .video-play:hover .play-icon, .video-play:focus-visible .play-icon { opacity: 1; color: #0b3484; }
     .video-play:focus-visible { outline: 3px solid var(--rice); outline-offset: 3px; }
-    .video-frame iframe { position: absolute; inset: 6px; width: calc(100% - 12px); height: calc(100% - 12px); border: 0; background: #000; }
-    @media (max-width: 575.98px) { .video { grid-template-columns: 140px 1fr; gap: .8rem; } }
+    .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    @media (max-width: 575.98px) { .video { grid-template-columns: 1fr; gap: .6rem; } }
     .print-only { display: none; }
     @media print {
       @page { margin: 1.5cm; }
@@ -258,7 +258,7 @@
       </ul>
 
       <h2>Medios y conferencias</h2>
-      <figure class="video">
+      <figure class="feature video">
         <div class="video-frame" id="video-frame">
           <button type="button" class="video-play" data-video="ypimACgxCQI" data-title="Experts on Energy and Sustainability (YouTube)" aria-label="Reproducir video: Experts on Energy and Sustainability, Instituto Baker de Políticas Públicas de Rice University (en inglés)">
             <img src="../images/video-baker-experts.jpg" alt="" width="960" height="540" loading="lazy">
