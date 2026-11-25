@@ -162,11 +162,20 @@
     table.cv .yr { width: 7.5rem; color: var(--gray); white-space: nowrap; padding-right: 1rem; }
     @media (max-width: 991.98px) { .sidebar { position: static; } }
     @media (max-width: 575.98px) { table.cv .yr { width: 5.5rem; } }
+    .video { margin: 1.75rem 0 0; }
+    .video-frame { position: relative; aspect-ratio: 16 / 9; background: #000; }
+    .video-play { display: block; width: 100%; height: 100%; padding: 0; border: 0; background: none; cursor: pointer; position: relative; }
+    .video-play img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .video-play .play-icon { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color: var(--rice); opacity: .92; line-height: 0; }
+    .video-play:hover .play-icon, .video-play:focus-visible .play-icon { opacity: 1; color: #0b3484; }
+    .video-play:focus-visible { outline: 3px solid var(--rice); outline-offset: 3px; }
+    .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .video figcaption { margin-top: .5rem; font-size: .95rem; }
     .print-only { display: none; }
     @media print {
       @page { margin: 1.5cm; }
       body { font-size: 10.5pt; }
-      .lang-switcher, .skip-link, .links { display: none !important; }
+      .lang-switcher, .skip-link, .links, .video { display: none !important; }
       .print-only { display: block; color: var(--gray); }
       .container { max-width: none !important; padding: 0 !important; }
       .row > aside, .row > main { flex: 0 0 100%; max-width: 100%; }
@@ -221,6 +230,16 @@
       <p class="lead-p">Soy docente del Departamento de Economía de Rice University y Fellow en Energía y Diseño de Mercados del Centro de Estudios Energéticos del Instituto Baker de Políticas Públicas de Rice University. Mi investigación se centra en organización industrial, política de competencia y teoría de juegos, y actualmente trabajo en energías renovables, hidrógeno verde, mercados minoristas de electricidad y minerales críticos para la transición energética.</p>
       <p>Enseño en las maestrías Master of Energy Economics y Online Master of Data Science de Rice, así como en el programa de pregrado en Economía. Anteriormente fui consultora del Equipo Global de Mercados y Competencia del Grupo Banco Mundial, profesora asistente (tenure-track) en la Universidad de Piura, en el Perú, y Economista Senior y Jefa de la Unidad de Investigación Económica del INDECOPI, la autoridad de competencia del Perú. Obtuve mi doctorado (PhD) en Economía en Stony Brook University.</p>
       <p>También soy cofundadora de <a href="https://locupix.com">Locupix</a>, una empresa emergente de aprendizaje de idiomas que ofrece más de 20 idiomas, donde he contribuido a la constitución de la empresa, la administración tributaria, la estrategia de negocio y la obtención de aprobaciones administrativas.</p>
+
+      <figure class="video">
+        <div class="video-frame" id="video-frame">
+          <button type="button" class="video-play" data-video="ypimACgxCQI" data-title="Experts on Energy and Sustainability (YouTube)" aria-label="Reproducir video: Experts on Energy and Sustainability, Instituto Baker de Políticas Públicas de Rice University (en inglés)">
+            <img src="../images/video-baker-experts.jpg" alt="" width="960" height="540" loading="lazy">
+            <span class="play-icon" aria-hidden="true"><svg viewBox="0 0 68 48" width="68" height="48"><rect width="68" height="48" rx="10" fill="currentColor"/><path d="M27 15v18l16-9z" fill="#fff"/></svg></span>
+          </button>
+        </div>
+        <figcaption><a href="https://www.youtube.com/watch?v=ypimACgxCQI" lang="en">Experts on Energy and Sustainability</a>. <span class="gray">Video del Instituto Baker de Políticas Públicas de Rice University (en inglés).</span></figcaption>
+      </figure>
 
       <h2>Áreas de especialización</h2>
       <ul class="plain" role="list">
@@ -304,6 +323,23 @@
   document.addEventListener('click', function (e) { if (d.open && !d.contains(e.target)) d.removeAttribute('open'); });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && d.open) { d.removeAttribute('open'); d.querySelector('summary').focus(); }
+  });
+})();
+</script>
+<script>
+// Load the YouTube player only when the visitor presses play (no YouTube requests before that).
+(function () {
+  var b = document.querySelector('.video-play');
+  if (!b) return;
+  b.addEventListener('click', function () {
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + b.dataset.video + '?autoplay=1&rel=0';
+    f.title = b.dataset.title;
+    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.allowFullscreen = true;
+    var frame = document.getElementById('video-frame');
+    frame.replaceChildren(f);
+    f.focus();
   });
 })();
 </script>

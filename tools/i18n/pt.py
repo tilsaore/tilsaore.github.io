@@ -35,6 +35,12 @@ PAIRS = [
     ("I am also a co-founder of <a href=\"https://locupix.com\">Locupix</a>, an early-stage language-learning company that supports 20+ languages, where I have contributed to company formation, tax-related administration, business strategy, and administrative approvals.",
      "Também sou cofundadora da <a href=\"https://locupix.com\">Locupix</a>, uma empresa em estágio inicial de aprendizado de idiomas que oferece mais de 20 idiomas, onde contribuí para a constituição da empresa, a administração tributária, a estratégia de negócios e a obtenção de aprovações administrativas."),
 
+    # Video
+    ('aria-label="Play video: Experts on Energy and Sustainability, Rice University\'s Baker Institute for Public Policy"',
+     'aria-label="Reproduzir vídeo: Experts on Energy and Sustainability, Instituto Baker de Políticas Públicas da Rice University (em inglês)"'),
+    ("<span class=\"gray\">Video by Rice University's Baker Institute for Public Policy.</span>",
+     "<span class=\"gray\">Vídeo do Instituto Baker de Políticas Públicas da Rice University (em inglês).</span>"),
+
     # Section headings
     ("<h2>Areas of expertise</h2>", "<h2>Áreas de especialização</h2>"),
     ("<h2>Work at the Baker Institute</h2>", "<h2>Trabalhos no Instituto Baker</h2>"),

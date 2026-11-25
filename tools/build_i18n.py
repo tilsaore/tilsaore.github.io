@@ -24,6 +24,7 @@ LANGS = {
 }
 # Titles kept in English on translated pages; tagged lang="en" for screen readers.
 ENGLISH_TITLES = [
+    "Experts on Energy and Sustainability",
     "Critical Minerals in Latin America",
     "Competitive Retail Electricity Markets and Consumer Switching in Texas",
     "Mining, Governance, and Communities",
