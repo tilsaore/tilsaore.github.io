@@ -162,15 +162,18 @@
     table.cv .yr { width: 7.5rem; color: var(--gray); white-space: nowrap; padding-right: 1rem; }
     @media (max-width: 991.98px) { .sidebar { position: static; } }
     @media (max-width: 575.98px) { table.cv .yr { width: 5.5rem; } }
-    .video { margin: 1.75rem 0 0; }
+    .video { display: grid; grid-template-columns: 200px 1fr; gap: 1rem; align-items: center; margin: 0 0 1.1rem; }
+    .video.playing { display: block; }
     .video-frame { position: relative; aspect-ratio: 16 / 9; background: #000; }
+    .video.playing .video-frame { margin-bottom: .5rem; }
     .video-play { display: block; width: 100%; height: 100%; padding: 0; border: 0; background: none; cursor: pointer; position: relative; }
     .video-play img { display: block; width: 100%; height: 100%; object-fit: cover; }
     .video-play .play-icon { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); color: var(--rice); opacity: .92; line-height: 0; }
+    .video-play .play-icon svg { width: 40px; height: 28px; }
     .video-play:hover .play-icon, .video-play:focus-visible .play-icon { opacity: 1; color: #0b3484; }
     .video-play:focus-visible { outline: 3px solid var(--rice); outline-offset: 3px; }
     .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-    .video figcaption { margin-top: .5rem; font-size: .95rem; }
+    @media (max-width: 575.98px) { .video { grid-template-columns: 140px 1fr; gap: .8rem; } }
     .print-only { display: none; }
     @media print {
       @page { margin: 1.5cm; }
@@ -231,16 +234,6 @@
       <p>I teach in Rice's Master of Energy Economics, the Online Master of Data Science, and the undergraduate economics program. Previously I was a consultant with the World Bank Group's Markets and Competition Global Team, a tenure-track assistant professor at the Universidad de Piura in Peru, and Senior Economist and Head of the Economic Research Unit at INDECOPI, Peru's competition authority. I received my PhD in Economics from Stony Brook University.</p>
       <p>I am also a co-founder of <a href="https://locupix.com">Locupix</a>, an early-stage language-learning company that supports 20+ languages, where I have contributed to company formation, tax-related administration, business strategy, and administrative approvals.</p>
 
-      <figure class="video">
-        <div class="video-frame" id="video-frame">
-          <button type="button" class="video-play" data-video="ypimACgxCQI" data-title="Experts on Energy and Sustainability (YouTube)" aria-label="Play video: Experts on Energy and Sustainability, Rice University's Baker Institute for Public Policy">
-            <img src="images/video-baker-experts.jpg" alt="" width="960" height="540" loading="lazy">
-            <span class="play-icon" aria-hidden="true"><svg viewBox="0 0 68 48" width="68" height="48"><rect width="68" height="48" rx="10" fill="currentColor"/><path d="M27 15v18l16-9z" fill="#fff"/></svg></span>
-          </button>
-        </div>
-        <figcaption><a href="https://www.youtube.com/watch?v=ypimACgxCQI">Experts on Energy and Sustainability</a>. <span class="gray">Video by Rice University's Baker Institute for Public Policy.</span></figcaption>
-      </figure>
-
       <h2>Areas of expertise</h2>
       <ul class="plain" role="list">
         <li>Industrial organization and game theory: market structure, pricing strategies, and switching costs in network industries.</li>
@@ -265,6 +258,15 @@
       </ul>
 
       <h2>Media and talks</h2>
+      <figure class="video">
+        <div class="video-frame" id="video-frame">
+          <button type="button" class="video-play" data-video="ypimACgxCQI" data-title="Experts on Energy and Sustainability (YouTube)" aria-label="Play video: Experts on Energy and Sustainability, Rice University's Baker Institute for Public Policy">
+            <img src="images/video-baker-experts.jpg" alt="" width="960" height="540" loading="lazy">
+            <span class="play-icon" aria-hidden="true"><svg viewBox="0 0 68 48" width="68" height="48"><rect width="68" height="48" rx="10" fill="currentColor"/><path d="M27 15v18l16-9z" fill="#fff"/></svg></span>
+          </button>
+        </div>
+        <figcaption><a href="https://www.youtube.com/watch?v=ypimACgxCQI">Experts on Energy and Sustainability</a>. <span class="gray">Video by Rice University's Baker Institute for Public Policy.</span></figcaption>
+      </figure>
       <ul class="plain" role="list">
         <li><a href="https://laopinion.com/2026/03/16/que-es-el-proyecto-boveda-con-el-que-ee-uu-quiere-asegurar-una-reserva-estrategica-de-minerales-criticos-y-que-rol-juega-america-latina/" lang="es">Qué es el “Proyecto Bóveda” con el que EE.UU. quiere asegurar una reserva estratégica de minerales críticos y qué rol juega América Latina</a>. <span class="gray"><em>BBC News Mundo</em>, March 2026. Interviewed on U.S. and Chinese competition for Latin American critical minerals.</span></li>
         <li><a href="https://news.rice.edu/news/2026/rice-energy-research-explores-practical-solutions-global-supply-chain-challenges">Rice energy research explores practical solutions to global supply-chain challenges</a>. <span class="gray"><em>Rice News</em>, 2026. Covers the <em>Energy Insights 2026</em> article on Texas's competitive retail electricity market.</span></li>
@@ -338,6 +340,7 @@
     f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
     f.allowFullscreen = true;
     var frame = document.getElementById('video-frame');
+    frame.closest('.video').classList.add('playing');
     frame.replaceChildren(f);
     f.focus();
   });
