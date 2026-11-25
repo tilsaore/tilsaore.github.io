@@ -164,7 +164,7 @@
     @media (max-width: 575.98px) { table.cv .yr { width: 5.5rem; } }
     .video { display: grid; grid-template-columns: 200px 1fr; gap: 1rem; align-items: center; margin: 0 0 1.1rem; }
     .video.playing { display: block; }
-    .video-frame { position: relative; aspect-ratio: 16 / 9; background: #000; }
+    .video-frame { position: relative; aspect-ratio: 16 / 9; padding: 6px; background: #fff; border: 1px solid var(--rule); }
     .video.playing .video-frame { margin-bottom: .5rem; }
     .video-play { display: block; width: 100%; height: 100%; padding: 0; border: 0; background: none; cursor: pointer; position: relative; }
     .video-play img { display: block; width: 100%; height: 100%; object-fit: cover; }
@@ -172,7 +172,7 @@
     .video-play .play-icon svg { width: 40px; height: 28px; }
     .video-play:hover .play-icon, .video-play:focus-visible .play-icon { opacity: 1; color: #0b3484; }
     .video-play:focus-visible { outline: 3px solid var(--rice); outline-offset: 3px; }
-    .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .video-frame iframe { position: absolute; inset: 6px; width: calc(100% - 12px); height: calc(100% - 12px); border: 0; background: #000; }
     @media (max-width: 575.98px) { .video { grid-template-columns: 140px 1fr; gap: .8rem; } }
     .print-only { display: none; }
     @media print {
